@@ -1,0 +1,28 @@
+#inclube <stdio.h>
+
+int main(){
+    int opção, quantidade;
+    float total =0, parcial;
+
+    printf("===Lanchonete da Escola===\n");
+
+    do{
+        printf("\nCardápio:\n");
+        printf("1-Cachoro Quente (R$5,00)\n");
+        printf("2-X-Salada (R$8,00)\n");
+        printf("3- Refrigerante (R$4,00)\n");
+        printf("4- Suco Natural (R$6,00)\n");
+        printf("0- Finalizar pedido\n");
+
+        printf("\nEscolha o item:");
+        scanf("%d",&opção);
+
+        if (opção==0)break;
+
+        printf("Informe a quantidade:");
+        scanf("%d",&quantidade);
+        switch(opção) {
+            case 1:
+            parcial= quantidade *5.0;
+            printf("Você pediu %d Cachorros(s) Quente: R$%.2f\n", quantidade, parcial);
+            total += parcial;
